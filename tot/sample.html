@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tales of TN</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+          
+          body {
+              background-color: black;
+             
+         
+             
+          }
+          
+          .container-carousel {
+            background-color : black;
+              margin: 0px;
+              padding: 0px;
+              
+              height: 100vh;
+              width: auto;
+              background-size: cover;
+              background-position: center;
+          }
+          header{
+             
+              background-color: black;
+          /*    background-image: url(dynamic.gif);*/
+             
+          }
+          section{
+               
+              background-color: black;
+            /*  background-image: url(dynamic.gif);*/
+               
+          }
+          
+          .Navigation{
+            
+             position: absolute;
+top: 0;
+left : 0;
+width: 100%;
+background-color:black;
+box-shadow: 0 6px 6px  #16161d;
+z-index: 9999;
+height: 6%;
+          }
+          .update-event{
+              background-color: black;
+              margin-bottom: -200px;
+              ;
+          }         
+       /*   .row {
+      width : 1140px;
+      max-width: 0 auto;
+    } */
+          /*
+          .main-nav{
+float:right;
+list-style: none;
+margin-top:5px;
+padding-bottom: 350px;
+
+}
+.main-nav li{
+  color: white;
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+  padding: 8px 0;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-bottom:  1px solid  #ff6700;
+  transition: border-bottom 0.5s;
+  font-family: arial;
+
+}
+.main-nav li a:hover{
+  border-bottom: 1px solid green;
+}
+*/
+          h2{
+              color: white;
+              font-weight: 300;
+word-spacing: 2px;
+              text-transform: uppercase;
+              font-size: 30px;
+              margin-left: 500px;
+              margin-bottom: -45px;
+              padding-top: -80px;
+              margin-top: 20px;
+          }
+          /*
+          h2{
+              color : #fff;
+  margin-top : 0;
+  margin-bottom: 20px;
+padding-top: 200px;
+padding-left: 200px;
+  font-size : 240%;
+  font-weight: 300;
+  letter-spacing : 1px;
+  word-spacing: 3px;
+text-transform: uppercase;
+
+          }
+          */
+          h1{
+              font-size: 30px;
+              padding-left: 150px;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+          }
+          h1:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 70px;
+margin-left: 30px;
+              margin-top: 10px;
+}
+          
+        h3{
+  color:  white;
+  text-align: center;
+  text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 300;
+word-spacing: 2px;
+padding-left: 40px;
+padding-top: 35px;
+}
+h3:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 120px;
+  margin: auto auto;
+  margin-top: 10px;
+    padding-right: 5px;
+}
+    
+          h4{
+              color: white;
+              text-transform: uppercase;
+              font-size: 20px;
+    
+          }
+          h4:after{
+  display: block;
+  height: 2px;
+  background-color: #ff6700;
+  content: " ";
+  width: 60px;
+  margin-left: 120px;
+    margin-top: 10px;
+}
+          h5{
+              color: white;
+              font-size: 20px;
+              margin-left: 520px;
+              padding: 10px;
+          }        
+          
+          
+          
+ 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+     background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)) ,url(dynamic.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+  overflow-y: hidden;
+  transition: 0.6s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+        
+          
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: black;
+ 
+    padding: 15px;
+    border-radius: 15px; 
+}
+
+.flip-card-back {
+  background-color: black;
+    opacity: 0.8;
+  color: white;
+  transform: rotateY(180deg);
+}          
+          
+          
+footer{
+    height: 80vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  background-image: url(bottom.png);
+    background-position: center;
+
+}
+          .foot{
+              position: fixed;
+               left: 0;
+   bottom: 0;
+   width: 100%;
+          }  
+          
+          .head{
+              position: fixed;
+              left: 0;
+   top: 0;
+   width: 100%;
+          }
+          
+          
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+   
+  overflow-x: hidden;
+  transition: 0.6s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}     
+          
+      .social-links{
+  list-style: none;
+  float: none;
+}
+.social-links li{
+  display: inline;
+  margin-right: 10px;
+}
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 35%;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-youtube {
+  background: black;
+  color: #bb0000;
+}
+
+.fa-instagram {
+  background:#bb0000;
+  color: white;
+}
+.fa-whatsapp {
+  background:  #25d366;
+  color: white;
+}
+      
+          
+          .row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+/* .sticky { display: none; } */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+.span-4-of-4 {
+	width: 100%;
+}
+
+.span-3-of-4 {
+	width: 74.6%;
+}
+
+.span-2-of-4 {
+	width: 49.2%;
+}
+
+.span-1-of-4 {
+	width: 23.8%;
+}
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%;
+	}
+	.span-3-of-4 {
+		width: 100%;
+	}
+	.span-2-of-4 {
+		width: 100%;
+	}
+	.span-1-of-4 {
+		width: 100%;
+	}
+}
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 45%;
+}
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	
+	.span-2-of-2 {
+		width: 100%;
+	}
+	.span-1-of-2 {
+		width: 100%;
+	}
+}          
+          .image{
+              padding: 50px;
+              margin-left: 30px;
+              width: 90%;
+              height: 90%;
+              position: relative;
+             border: 2px solid  #ff6700;
+              border-radius: 38px;
+ 
+  
+          }   
+          
+          .containers{
+            
+          }
+          
+.containers:hover .overplays {
+  opacity: 0.9;
+     -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari 3-8 */
+  transform: scale(0.9); 
+     transition: transform .7s;
+}
+   .aboutext{
+       width:380px;
+       height: 350px;
+        border: 2px solid #ff6700;
+       padding-top: 20px;
+       line-height: 40px;
+           padding-left: 50px;
+            margin-left: 150px;
+                font-size: 15px;
+                color: white;
+                background-color:black;
+                
+            }
+          .aboutext:hover{
+               transform: rotateY(180deg);
+             /*color: white;
+background-color:limegreen;
+border: none; 
+            text-decoration: none;*/
+             -ms-transform: scale(0.9); /* IE 9 */
+  -webkit-transform: scale(0.9); /* Safari 3-8 */
+  transform: scale(0.9); 
+     transition: transform .8s; 
+          }    
+          .text{
+             
+              padding-left: 20px;
+            margin-left: 50px;
+             color: white;
+              font-size: 15px; 
+              background-color: black;
+              position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+          }
+         
+          @keyframes example {
+  0%   {background-color:black; left:0px; top:-60px;}
+ 
+  100% {background-color:black; left:0px; top:0px;}
+}
+          .logo{
+              /*border: 2px solid #ff6700;*/
+  border-radius: 50%;
+  padding: 5px;
+  width: 100px;
+              margin-left: 1220px;
+              margin-bottom: 5px;
+              margin-top: 5px;
+          }
+         
+          .packages{
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-top: 30px;
+             
+          }
+          .packages01{
+              padding-bottom: 70px;
+              padding-left: 50px;
+              padding-right: 50px;
+          }
+          
+        .contain {
+  position: relative;
+  width: 50%;
+            height: 100%;
+}
+
+.imag {
+/*
+  border: 2px solid #ff6700;
+    padding: 15px;
+    border-radius: 28px;  */
+    position: relative;
+  width: 200%;
+  height: 200%;
+     
+}
+
+.overl {
+   
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:black;
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  transition: .5s ease;
+    opacity: 0.9;
+}
+
+.contain:hover .overl {
+  height: 50%;
+    
+}
+
+.tex {
+    padding-bottom: 10px;
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}  
+          .button{
+               font-family: 'Airal';
+  border-radius: 5px;
+  border:none;
+position: absolute;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:bold;
+  padding : 5px 25px;
+  font-weight : 300;
+  color:white;
+text-decoration: none;
+
+transition: background-color 0.5s , color 0.5s;
+                  
+          }        
+          .btn-pack{
+              
+                margin-top: 60px;
+              margin-left: 75px;
+    background:black;
+          }   
+        .button:hover{
+            color: white;
+background-color:limegreen;
+border: none; 
+            text-decoration: none;
+             -ms-transform: scale(0.8); /* IE 9 */
+  -webkit-transform: scale(0.8); /* Safari 3-8 */
+  transform: scale(0.8); 
+     transition: transform .8s;
+          }
+          .zone-card{
+              color: white;
+              text-decoration: none;
+              font-size: 15px;
+              line-height: 25px;
+          }
+          .zone-card:hover {
+              color: limegreen;
+              text-decoration: none;
+          }
+          
+          .container {
+     width: 600px; 
+    height: 250px;
+
+    margin: 2em 425px;
+    overflow: hidden;
+    background: black;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.marquee {
+    font-size: 15px;
+    color: white;
+   
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 8s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Make it move! */
+@keyframes marquee {
+    0%   { top:   8em }
+    100% { top: -11em }
+}
+
+/* Make it look pretty */
+.microsoft .marquee {
+	margin: 0;
+    padding: 20px;
+    line-height: 20px;
+    font: 1em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.microsoft:before, .microsoft::before,
+.microsoft:after,  .microsoft::after {
+    left: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    width: 600px; 
+    height: 350px;
+   
+  
+}
+
+.microsoft:after, .microsoft::after {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.microsoft:before, .microsoft::before {
+    top: 0;
+}
+
+/* Style the links */
+.vanity {
+    color: #333;
+    text-align: center;
+    font: .75em 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+}
+
+.vanity a, .microsoft a {
+    font-size: 15px;
+    color: #1570A6;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.vanity a:hover, .microsoft a:hover {
+    color: #F65314;
+}
+
+/* Style toggle button */
+          /*
+.toggle {
+	display: block;
+    background-color: #ff6700;
+    margin: 2em auto;
+}   */  
+       
+    </style>
+    
+</head>
+    
+<body>
+
+   <section class="Navigation">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+   
+<span style="font-size:25px;cursor:pointer;color:white;padding-left: 10px; " onclick="openNav()">&#9776; User Menu</span>
+
+
+    <img src="nlogo.png.ico" alt="" class="logo">
+
+    <script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+    </section>
+<div class="container-carousel">
+   
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+      
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        
+      <div class="item active">
+          
+        <img src="homebeach.jpg" alt="Los Angeles" style="width:100%;height:95vh;">
+         
+          <div class="carousel-caption">
+              <!--
+              <nav class="">
+<div class="row">
+  <ul class="main-nav">
+    <li><a href="#features">How this works</a></li>
+      <li><a href="#quotes">Our Stories</a></li>
+          <li><a href="#team">About Us</a></li>
+            <li><a href="#foot">Contact Us</a></li>
+              <li><a href="http://drupal-8-8-1-serve.dd:8083/">Serve India</a></li>
+  </ul>
+</div>
+  </nav>
+              -->
+              
+              
+              
+          <h3>Beaches</h3>
+         
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="mamm.jpg" alt="Chicago" style="width:100%; height:95vh;">
+          <div class="carousel-caption">
+          <h3>Temples</h3>
+          
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="dolphin.jpg" alt="New york" style="width:100%;height:95vh;">
+          <div class="carousel-caption">
+          <h3>Western Ghats</h3>
+          
+        </div>
+      </div>
+        
+        <div class="item">
+        <img src="homepamban.jpg" alt="New york" style="width:100%;height:95vh;">
+          <div class="carousel-caption">
+          <h3>Pamban Bridge</h3>
+       
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+    <header>
+        <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="Railways.jpg" alt="" class="image">
+                          
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> Railways <br>
+                        </h1>
+                        The first railway proposals for India were made in Madras in 1832.[9] The country's first train, Red Hill Railway (built by Arthur Cotton to transport granite for road-building), ran from Red Hills to the Chintadripet bridge in Madras in 1837.[9] In 1845, the Godavari Dam Construction Railway was built by Cotton at Dowleswaram in Rajahmundry, to supply stone for the construction of a dam over the Godavari River. In 1851, the Solani Aqueduct Railway was built by Proby Cautley in Roorkee to transport construction materials for an aqueduct over the Solani River.[9]
+
+                        The history of railways in Tamil Nadu is deeply rooted in the early developments of the Indian railway system. The first railway proposals in India were made in Madras in 1832. The region saw the establishment of the country's first train, the Red Hill Railway, in 1837. This railway, built by Arthur Cotton, was used to transport granite for road-building, running from Red Hills to the Chintadripet bridge in Madras.
+
+                        In subsequent years, Tamil Nadu witnessed further railway developments. For example, in 1856, the first passenger train in South India ran from Royapuram-Veyasarapady (Madras) to Wallajah Road (Arcot). This marked a significant milestone in the expansion of the railway network in the region and played a crucial role in connecting various parts of Tamil Nadu.
+                        
+                        These early developments laid the foundation for the extensive railway network that exists in Tamil Nadu today, playing a vital role in the state's transportation infrastructure and connectivity. <a href="https://sr.indianrailways.gov.in/">Book Here</a>
+                    </div>
+                </div>
+               
+            </div>
+    </header>
+    
+    <section class="hotels">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1>Hotels <br>
+                        </h1>
+                        In a similar vein, the hospitality landscape in Tamil Nadu was transformed by visionary leaders. In 1878, the renowned industrialist and philanthropist, Sir M. Ct. Muthiah Chettiar, founded the iconic Connemara Hotel in Chennai. This historic hotel, located in the heart of the city, quickly became a symbol of luxury and hospitality, attracting guests from far and wide.
+
+                        The story goes that Sir M. Ct. Muthiah Chettiar was inspired to build the Connemara Hotel after witnessing the need for high-quality accommodation in Chennai. At that time, the city lacked upscale hotels that could cater to the needs of discerning travelers. Determined to fill this gap, Sir M. Ct. Muthiah Chettiar embarked on a journey to create a world-class hotel that would not only provide exceptional service but also showcase the rich cultural heritage of Tamil Nadu.
+                        
+                        To achieve this vision, Sir M. Ct. Muthiah Chettiar traveled extensively to Europe to source the finest materials, art pieces, and furniture for the hotel. His meticulous attention to detail and commitment to excellence set the standard for luxury hospitality in Tamil Nadu.
+                        
+                        Today, the Connemara Hotel stands as a testament to Sir M. Ct. Muthiah Chettiar's vision and legacy, offering guests a truly unforgettable experience that celebrates the heritage and culture of Tamil Nadu.<a href="https://www.trivago.in/en-IN/lm?themeId=401&search=200-64952&sem_keyword=tamil%20nadu%20hotel&sem_creativeid=590566638923&sem_matchtype=b&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=11541397361&sem_adgroupid=116149329967&sem_targetid=kwd-151496076&sem_location=9301174&cipc=sem&cip=9119000439&gad_source=1&gclid=CjwKCAjw7-SvBhB6EiwAwYdCAS-dkYZ6-nAQti9CkX3hBQHyAi7qFz3QKoxgTeyYegItZV7HCffnPBoC-L8QAvD_BwE">Book Here</a>                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="hoteltaj.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>  
+            </div>
+    </section>
+    
+    <section class="culture">
+    <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="cuisines.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> cuisines <br>
+                        </h1>
+                        Tamil Nadu's rich culinary heritage is a vibrant tapestry of flavors, reflecting the state's diverse cultural and historical influences. Situated in the southern part of India, Tamil Nadu boasts a cuisine that is distinct and flavorful, with a wide variety of dishes that cater to different tastes and preferences.
+
+                        One of the defining features of Tamil Nadu's cuisine is its use of locally available spices, herbs, vegetables, and fruits. The state's cuisine is known for its bold and aromatic flavors, with dishes often featuring a combination of spices such as coriander, cumin, turmeric, and mustard seeds. These spices not only add depth and flavor to the dishes but also offer a range of health benefits.
+                        
+                        Tamil Nadu's cuisine is also influenced by its cultural and religious practices, particularly Hinduism. Many dishes are prepared in accordance with religious customs and traditions, with certain ingredients being considered sacred and used in specific ways. For example, vegetarianism is widely practiced in Tamil Nadu, leading to a variety of delicious vegetarian dishes that are a staple in the local diet.
+                        
+                        The state's cuisine has also been influenced by centuries of trade and invasions. Historical events such as foreign invasions and trade relations have introduced new ingredients and cooking techniques to Tamil Nadu's culinary repertoire. For example, the Columbian discovery of the New World brought new vegetables and fruits to India, including potatoes, tomatoes, and chillies, which have become staples in Tamil Nadu's cuisine.
+                        
+                        Overall, Tamil Nadu's cuisine is a testament to the state's rich history and cultural heritage, with each dish telling a story of tradition, innovation, and flavor.<a href="https://www.zomato.com/">Book Here</a>                    </div>
+                </div>
+               
+            </div>
+    </section>
+    
+     <section class="food">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> culture <br>
+                        </h1>
+                        Tamil Nadu's culture is a vibrant tapestry woven from thousands of distinct and unique cultures, reflecting the diversity of religions, languages, and communities present in the state. From its languages and religions to its dance, music, architecture, and food, Tamil Nadu's culture is rich and varied, with each region within the state boasting its own unique traditions and customs.
+
+                        One of the defining features of Tamil Nadu's culture is its deep-rooted connection to its ancient history and traditions. The state's languages, including Tamil, are among the oldest in the world, and have played a significant role in shaping the culture of the region. Tamil Nadu's cuisine is also steeped in tradition, with dishes that have been passed down through generations, each with its own unique flavor and preparation method.
+                        
+                        Religion plays a crucial role in Tamil Nadu's culture, with Hinduism being the dominant faith. The state is home to some of the most revered temples in India, which are not only places of worship but also centers of art, architecture, and culture.
+                        
+                        Tamil Nadu's culture has also been influenced by its interactions with other cultures and civilizations over the centuries. The state's proximity to the sea has made it a hub of trade and commerce, leading to the exchange of ideas, languages, and customs with various cultures from around the world.
+                        
+                        Overall, Tamil Nadu's culture is a reflection of its rich history, diverse communities, and deep-rooted traditions. It is a culture that is constantly evolving, yet firmly rooted in its past, making it a fascinating and vibrant tapestry of traditions, customs, and beliefs.                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="culture.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>  
+            </div>
+    </section>
+    
+     <section class="places">
+    <div class="row">
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="history.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> history <br>
+                        </h1>
+                        According to modern genetic research, anatomically modern humans first arrived in the Indian subcontinent from Africa between 73,000 and 55,000 years ago. However, the earliest known human remains in South Asia date back to around 30,000 years ago. The transition from foraging to settled life, which involved the development of farming and pastoralism, began in South Asia around 7,000 BCE.
+
+                        One of the key sites for understanding this transition is Mehrgarh in Balochistan, Pakistan, where evidence of the domestication of wheat and barley, followed by goats, sheep, and cattle, has been found. By 4,500 BCE, settled life had become more widespread, leading to the gradual development of the Indus Valley Civilization.
+                        
+                        The Indus Valley Civilization, which flourished between 2,500 BCE and 1900 BCE, was one of the world's earliest urban civilizations, contemporaneous with Ancient Egypt and Mesopotamia. It was located in what is now Pakistan and north-western India, and was known for its advanced urban planning, baked brick houses, elaborate drainage systems, and sophisticated water supply mechanisms.<a href="">Know More</a>                    </div>
+                </div>
+               
+            </div>
+    </section>
+    
+     <section class="nature">
+    <div class="row">
+               
+                <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> nature <br>
+                        </h1>
+                        Tamil Nadu, known for its diverse and picturesque landscapes, boasts several stunning waterfalls that add to the state's natural beauty. A waterfall is an area where water cascades over a vertical drop or a series of steep drops in the course of a stream or river. These waterfalls can be found in various parts of Tamil Nadu, particularly in the Western Ghats region, where the land rises sharply, creating ideal conditions for the formation of waterfalls.
+
+                        The waterfalls in Tamil Nadu are often at their most impressive during the monsoon season when the rivers are swollen with rainwater. Some of the most famous waterfalls in Tamil Nadu include Courtallam, Hogenakkal, and Catherine Falls, each offering a unique and breathtaking sight for visitors.
+                        
+                        The formation of waterfalls in Tamil Nadu is influenced by the region's geography, with many waterfalls occurring in areas where the rivers flow over resistant bedrock. This slow erosion of the bedrock over time creates the stunning cascades that we see today. Additionally, the monsoon rains play a crucial role in replenishing the waterfalls, ensuring that they continue to flow year after year.
+                        
+                        Overall, the waterfalls of Tamil Nadu are not only a sight to behold but also a testament to the state's natural beauty and rich biodiversity. They are a popular destination for tourists and nature lovers alike, offering a refreshing escape into the heart of nature.                        <a href="https://www.nature.org/en-us/about-us/where-we-work/india/stories-in-india/india-a-land-of-natural-wonders/">Know More</a>
+                    </div>
+                </div>
+                <div class="col span-1-of-2">
+                   <div class="containers">
+                       <div class="overplays"> 
+                       <img src="nature.jpg" alt="" class="image">
+                    </div>
+                       </div>
+                </div>
+            </div>
+    </section>
+   
+    <section class="packages">
+        <h3> Explore TN
+        </h3>
+    <div class="row">
+        <div class="col span-1-of-4">
+                    <div class="contain">
+  <img src="pack-si.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">The Kerala backwaters</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>
+                <div class="col span-1-of-4">
+                  
+<div class="contain">
+  <img src="pack-ni.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">The Mugal Era</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+         <div class="col span-1-of-4">
+                  <div class="contain">
+  <img src="KEDARNATH.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Lord Shiva</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+         <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="rameshwaram.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Ramaswarem</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div>  
+                </div>
+    </section>
+    
+    <section class="packages01">
+    <div class="row">
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="wildlife.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Wildlife Parks</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="jamamasjid.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Old Delhi</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="lucknow-metro.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Travel Pass</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+        <div class="col span-1-of-4">
+                   <div class="contain">
+  <img src="la.jpg" alt="Avatar" class="imag">
+  <div class="overl">
+    <div class="tex">Winters</div>
+      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+  </div>
+</div>
+                </div> 
+
+        </div>
+    </section>
+    
+    <section class="About-India">
+    <div class="row">
+                <div class="col span-1-of-2">
+                    <div class="text">
+                    <h1>State Info<br>
+                    </h1>
+                    </div>
+                  <div class="aboutext">
+                    
+                      Currency : Indian Rupyee (INR)<br>
+                      Population : 70.2 Million<br>
+                      Time Zone :UTC+5:30<br>
+                      Capital : Chennai<br>
+                      Area : 130,060 km2 <br>
+                      Districts : 38<br>
+                      Country Code : +91
+                    </div>
+                </div>
+         <div class="col span-1-of-2">
+                    <div class="text">
+                        <h1> About TN <br>
+                        </h1>
+                       
+
+Tourism in Tamil Nadu has experienced remarkable growth in recent years, thanks to the state's rich cultural heritage and breathtaking natural beauty. The Tamil Nadu Tourism Department has recognized the immense potential of the state as a tourist destination, leading to a surge in visitors from around the world.
+
+Tamil Nadu offers a diverse range of attractions, from its misty hill stations and picturesque beaches to its awe-inspiring historical monuments and golden deserts. The state's serene backwaters, vibrant pilgrimage sites, and diverse wildlife further add to its charm.
+
+In addition to its natural beauty, Tamil Nadu boasts a vibrant culture, with a variety of festivals, lively markets, and a warm hospitality that is truly unforgettable. Travelers can explore the colorful and cultural diversity of Tamil Nadu by visiting its various regions, each offering a unique experience.
+
+Our Tamil Nadu tourism guide provides a glimpse into the rich tapestry of travel and tourism in the state, including information on South India tourism, North India tourism, and all major tourist destinations and services in Tamil Nadu. Come, discover the resplendent colors and rich cultural heritage of Tamil Nadu, and make your visit truly unforgettable.
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <section class="Divisions">
+    <div class="row">
+        <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="western.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>Western Ghats</h4> 
+    <a class="zone-card" href="http://www.uptourism.gov.in/">Coimbatore</a><br>
+     <a class="zone-card" href="http://delhitourism.gov.in/">Dindugal</a>    <br>
+         <a class="zone-card" href="https://himachaltourism.gov.in/"> Theni</a><br>
+         <a class="zone-card" href="http://bstdc.bih.nic.in/">Madurai</a><br>      
+      <a class="zone-card" href="http://punjabtourism.gov.in/">Virudhunagar</a><br>  
+        <a class="zone-card" href="https://uttarakhandtourism.gov.in/">Tirunelveli</a><br>  
+       <a class="zone-card" href="http://haryanatourism.gov.in/">Kanyakumari</a><br>  
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="eastern.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>Eastern Ghats </h4> 
+     <a class="zone-card" href="https://www.telanganatourism.gov.in/">Vellore</a><br>
+     <a class="zone-card" href="https://tourism.ap.gov.in/">Erode</a>    <br>
+         <a class="zone-card" href="http://www.tamilnadutourism.org/">Salem</a><br>
+         <a class="zone-card" href="https://www.karnatakatourism.org/">Namakkal</a><br>     
+       <a class="zone-card" href="https://www.keralatourism.org/">Dharmapuri</a><br>  
+      <a class="zone-card" href="http://goatourism.gov.in/">Thiruvannamalai</a><br>  
+        <a class="zone-card" href="http://www.pondytourism.in/">Villupuram</a><br>  
+        
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="coastal.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>Coastal Line</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Chennai</a><br>
+     <a class="zone-card" href="https://www.gujarattourism.com/">Chengalpattu</a>    <br>
+         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Cuddalore</a><br>
+          <a class="zone-card" href="http://www.mptourism.com/">Mayiladuthurai</a><br>  
+         <a class="zone-card" href="http://cggovttourism.ddns.net/">Nagapattinam</a><br>     
+       <a class="zone-card" href="http://odishatourism.gov.in/">Pudukottai</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Thoothukudi</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Ramanathapuram</a><br>  
+
+        
+    </div>
+  </div>
+</div>
+        </div>
+         <div class="col span-1-of-4">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="dhanush.jpg" alt="Avatar" style="width:300px;height:220px;">
+    </div>
+    <div class="flip-card-back">
+      <h4>Islands</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Ramanathapuram</a><br>
+        
+    </div>
+  </div>
+</div>
+        </div>
+        </div>
+
+    </section>
+    
+    <section class="update-event">
+        <h3> Upcoming Events</h3>
+    <div class="microsoft container">
+ <!-- <p class="marquee">Windows 8 and Windows RT are focused on your life—your friends and family, your apps, and your stuff. With new things like the <a href="https://windows.microsoft.com/en-US/windows-8/start-screen">Start screen</a>, <a href="https://windows.microsoft.com/en-US/windows-8/charms">charms</a>, and a <a href="https://windows.microsoft.com/en-US/windows-8/microsoft-account">Microsoft account</a>, you can spend less time searching and more time doing.</p> -->
+       <p class="marquee">
+            The Great Indian Travel Bazaar  <a href="https://10times.com/gitb">(GITB)</a> <br>
+India Tourism Conclave <a href="https://10times.com/india-tourism-conclave-new-delhi"> New Delhi </a> <br>
+International Conference on Rural Tourism - Challenges, Scope and Entrepreneurship Development<a href="https://10times.com/international-conference-on-rural-tourism"> Dheradun</a> <br>
+International Tourism Exhibition <a href="https://10times.com/sittf">(ITE)</a> <br>
+Tourism Expo India <a href="https://10times.com/tourism-expo-india">(TEI Kolkata)</a> <br>
+International Travel Roadshow <a href="https://10times.com/itr-new-delhi">(ITR)</a><br>
+Travel & Tourism Fair-Kolkata <a href="https://10times.com/travel-tourism-kolkata">(TTF)</a><br>
+Travel and Tourism Fair - Hyderabad <a href="https://10times.com/travel-tourism-hyderabad">(TTF SOUTH)</a><br>
+India International Travel Mart Bangalore <a href="https://10times.com/iitm-bangalore">(IITM Bangalore)</a><br>
+International Conference on Sustainable Tourism <a href="https://10times.com/icst-kolkata">(ICST)</a><br>
+Global Residency & Citizenship Expo <a href="https://10times.com/grace-india">(GRACE)</a><br>
+Islamic Travel Mart<a href="https://10times.com/itm-mumbai"> (ITM)</a><br>
+Diving Resort Travel Show India <a href="https://10times.com/drt-mumbai">(DRT)</a><br>
+ADEX India Ocean Festival - Mumbai Dive Show<a href="https://10times.com/adex-mumbai"> Mumbai</a>
+        </p>
+</div>
+<p class="vanity">
+    <a href="https://twitter.com/jonathansampson">@Team</a> of 
+    <a href="https://twitter.com/appendTo">@Travel.TourGuide</a>   
+</p>
+        <h5> Copyright &copy;. All rights reserved.</h5> 
+    </section>
+    
+    
+    <footer>
+        <div class="foot" id="end">
+        <!--
+                       <div>
+                           <ul class="social-links">
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fa fa-google"></i></a></li>
+                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                           </ul>
+                       </div>
+-->
+                   
+        
+<div id="mySidebar" class="sidebar">
+                           <div>
+                               <a href="#"> &nbsp; Contact Us</a>
+                           <ul class="social-links">
+                               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="#"><i class="fa fa-google"></i></a></li>
+                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                               <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                           </ul>
+                       </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+  
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav1()">  &#x2709;</button>
+        </div>
+        <script>
+function openNav1() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav1() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+            </div>
+               </footer>
+    
+</body>
+</html>

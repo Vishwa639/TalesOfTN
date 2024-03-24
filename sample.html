@@ -12,7 +12,7 @@
       <style>
           
           body {
-              background-color: black;
+              background-color: rgb(0, 0, 0);
              
          
              
@@ -231,13 +231,23 @@ h3:after{
   right: 35px;
   }
 }
-        
+
+.content {
+    max-height: 100px; /* Set max height for content */
+    overflow: hidden; /* Hide content that exceeds max height */
+    transition: max-height 0.3s ease; /* Smooth transition for height change */
+  }
+  
+  .content.expanded {
+    max-height: none; /* Expand content to show all when expanded class is added */
+  }        
           
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;
+  padding: 5px;
 }
 
 .flip-card-inner {
@@ -266,7 +276,7 @@ h3:after{
   background-color: black;
   color: black;
  
-    padding: 15px;
+    padding: 5px;
     border-radius: 15px; 
 }
 
@@ -591,7 +601,8 @@ border: none;
     border-radius: 28px;  */
     position: relative;
   width: 200%;
-  height: 200%;
+  height:200px;
+  object-fit: cover;
      
 }
 
@@ -613,6 +624,26 @@ border: none;
   height: 50%;
     
 }
+
+.view-more-btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #007bff; /* Blue color for the button text */
+  }
+
+  .view-more-btn::before {
+    content: '▼'; /* Unicode triangle down arrow */
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for arrow rotation */
+  }
+
+  .expanded .view-more-btn::before {
+    transform: rotate(180deg); /* Rotate arrow 180 degrees when expanded */
+  }
+
 
 .tex {
     padding-bottom: 10px;
@@ -786,7 +817,23 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 </script>
-    </section>
+
+<script>
+  function toggleContent() {
+      var sections = document.querySelectorAll('.packages01');
+      var button = document.querySelector('.view-more-btn');
+
+      sections.forEach(function (section) {
+          if (section.style.display === 'none') {
+              section.style.display = 'block';
+              button.textContent = 'View Less';
+          } else {
+              section.style.display = 'none';
+              button.textContent = 'View More';
+          }
+      });
+  }
+</script></section>
 <div class="container-carousel">
    
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -804,7 +851,7 @@ function closeNav() {
         
       <div class="item active">
           
-        <img src="pic3.jpg" alt="Los Angeles" style="width:100%;height:95vh;">
+        <img src="homebeach.jpg" alt="Los Angeles" style="width:100%;height:95vh;">
          
           <div class="carousel-caption">
               <!--
@@ -829,7 +876,7 @@ function closeNav() {
       </div>
 
       <div class="item">
-        <img src="pic1.jpg" alt="Chicago" style="width:100%; height:95vh;">
+        <img src="mamm.jpg" alt="Chicago" style="width:100%; height:95vh;">
           <div class="carousel-caption">
           <h3>Temples</h3>
           
@@ -837,7 +884,7 @@ function closeNav() {
       </div>
     
       <div class="item">
-        <img src="pic2.jpg" alt="New york" style="width:100%;height:95vh;">
+        <img src="dolphin.jpg" alt="New york" style="width:100%;height:95vh;">
           <div class="carousel-caption">
           <h3>Western Ghats</h3>
           
@@ -845,9 +892,9 @@ function closeNav() {
       </div>
         
         <div class="item">
-        <img src="rameshwaram.jpg" alt="New york" style="width:100%;height:95vh;">
+        <img src="homepamban.jpg" alt="New york" style="width:100%;height:95vh;">
           <div class="carousel-caption">
-          <h3></h3>
+          <h3>Pamban Bridge</h3>
        
         </div>
       </div>
@@ -881,7 +928,11 @@ function closeNav() {
                         </h1>
                         The first railway proposals for India were made in Madras in 1832.[9] The country's first train, Red Hill Railway (built by Arthur Cotton to transport granite for road-building), ran from Red Hills to the Chintadripet bridge in Madras in 1837.[9] In 1845, the Godavari Dam Construction Railway was built by Cotton at Dowleswaram in Rajahmundry, to supply stone for the construction of a dam over the Godavari River. In 1851, the Solani Aqueduct Railway was built by Proby Cautley in Roorkee to transport construction materials for an aqueduct over the Solani River.[9]
 
-India's first passenger train, hauled by three steam locomotives (Sahib, Sindh and Sultan), ran for 34 kilometres (21 mi) with 400 people in 14 carriages on 1,676 mm (5 ft 6 in) broad gauge track between Bori Bunder (Mumbai) and Thane on 16 April 1853.[10][11] The Thane viaducts, India's first railway bridges, were built over the Thane creek when the Mumbai-Thane line was extended to Kalyan in May 1854.[12] Eastern India's first passenger train ran 39 km (24 mi) from Howrah, near Kolkata, to Hoogly on 15 August 1854.[1] The first passenger train in South India ran 97 km (60 mi) from Royapuram- Veyasarapady (Madras) to Wallajah Road (Arcot) on 1 July 1856. <a href="https://www.irctc.co.in/nget/train-search">Book Here</a>
+                        The history of railways in Tamil Nadu is deeply rooted in the early developments of the Indian railway system. The first railway proposals in India were made in Madras in 1832. The region saw the establishment of the country's first train, the Red Hill Railway, in 1837. This railway, built by Arthur Cotton, was used to transport granite for road-building, running from Red Hills to the Chintadripet bridge in Madras.
+
+                        In subsequent years, Tamil Nadu witnessed further railway developments. For example, in 1856, the first passenger train in South India ran from Royapuram-Veyasarapady (Madras) to Wallajah Road (Arcot). This marked a significant milestone in the expansion of the railway network in the region and played a crucial role in connecting various parts of Tamil Nadu.
+                        
+                        These early developments laid the foundation for the extensive railway network that exists in Tamil Nadu today, playing a vital role in the state's transportation infrastructure and connectivity. <a href="https://sr.indianrailways.gov.in/">Book Here</a>
                     </div>
                 </div>
                
@@ -894,13 +945,18 @@ India's first passenger train, hauled by three steam locomotives (Sahib, Sindh a
                     <div class="text">
                         <h1>Hotels <br>
                         </h1>
-                       Jamsetji Nusserwanji Tata, founder of the Tata Group, opened the Taj Mahal Palace, a hotel in Mumbai (formerly called Bombay) overlooking the Arabian Sea, on 16 December 1903. It was the first Taj property and the first Taj hotel. There are several anecdotal stories about why Tata opened the Taj hotel. According to a story, he decided to open the hotel after an incident involving racial discrimination at the Watson's Hotel in Mumbai, where he was refused entry as the hotel permitted only Europeans.[8] Hotels that accepted only European guests were very common across British India then. According to another story, he opened the hotel when one of his friends expressed disgust over the hotels that were present in Bombay then. But a more plausible reason was advanced by Lovat Fraser, a close friend of the Tata and one of the early directors of the IHCL group, that the idea had long been in his mind and that he had made a study on the subject. He did not have any desire to own a hotel but he wanted to attract people to India and to improve Bombay. It is said that Jamsetji Tata had travelled to places like London, Paris, Berlin, and Düsseldorf to arrange for materials and pieces of art, furniture and other interior decor for his hotel.[9] The Taj group has since then developed and flourished, under the Tata Group. <a href="https://www.booking.com/">Book Here</a>
-                    </div>
+                        In a similar vein, the hospitality landscape in Tamil Nadu was transformed by visionary leaders. In 1878, the renowned industrialist and philanthropist, Sir M. Ct. Muthiah Chettiar, founded the iconic Connemara Hotel in Chennai. This historic hotel, located in the heart of the city, quickly became a symbol of luxury and hospitality, attracting guests from far and wide.
+
+                        The story goes that Sir M. Ct. Muthiah Chettiar was inspired to build the Connemara Hotel after witnessing the need for high-quality accommodation in Chennai. At that time, the city lacked upscale hotels that could cater to the needs of discerning travelers. Determined to fill this gap, Sir M. Ct. Muthiah Chettiar embarked on a journey to create a world-class hotel that would not only provide exceptional service but also showcase the rich cultural heritage of Tamil Nadu.
+                        
+                        To achieve this vision, Sir M. Ct. Muthiah Chettiar traveled extensively to Europe to source the finest materials, art pieces, and furniture for the hotel. His meticulous attention to detail and commitment to excellence set the standard for luxury hospitality in Tamil Nadu.
+                        
+                        Today, the Connemara Hotel stands as a testament to Sir M. Ct. Muthiah Chettiar's vision and legacy, offering guests a truly unforgettable experience that celebrates the heritage and culture of Tamil Nadu.<a href="https://www.trivago.in/en-IN/lm?themeId=401&search=200-64952&sem_keyword=tamil%20nadu%20hotel&sem_creativeid=590566638923&sem_matchtype=b&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=11541397361&sem_adgroupid=116149329967&sem_targetid=kwd-151496076&sem_location=9301174&cipc=sem&cip=9119000439&gad_source=1&gclid=CjwKCAjw7-SvBhB6EiwAwYdCAS-dkYZ6-nAQti9CkX3hBQHyAi7qFz3QKoxgTeyYegItZV7HCffnPBoC-L8QAvD_BwE">Book Here</a>                    </div>
                 </div>
                 <div class="col span-1-of-2">
                    <div class="containers">
                        <div class="overplays"> 
-                       <img src="hotel.jpg" alt="" class="image">
+                       <img src="hoteltaj.jpg" alt="" class="image">
                     </div>
                        </div>
                 </div>  
@@ -912,7 +968,7 @@ India's first passenger train, hauled by three steam locomotives (Sahib, Sindh a
                 <div class="col span-1-of-2">
                    <div class="containers">
                        <div class="overplays"> 
-                       <img src="food1.jpg" alt="" class="image">
+                       <img src="cuisines.jpg" alt="" class="image">
                     </div>
                        </div>
                 </div>
@@ -920,10 +976,15 @@ India's first passenger train, hauled by three steam locomotives (Sahib, Sindh a
                     <div class="text">
                         <h1> cuisines <br>
                         </h1>
-                        Indian cuisine consists of a wide variety of regional and traditional cuisines native to the Indian subcontinent. Given the range of diversity in soil type, climate, culture, ethnic groups, and occupations, these cuisines vary substantially from each other and use locally available spices, herbs, vegetables, and fruits. Indian food is also heavily influenced by religion, in particular Hinduism, cultural choices and traditions.[1] The cuisine is also influenced by centuries of Islamic rule, particularly the Mughal rule. Samosas and pilafs can be regarded as examples.
+                        Tamil Nadu's rich culinary heritage is a vibrant tapestry of flavors, reflecting the state's diverse cultural and historical influences. Situated in the southern part of India, Tamil Nadu boasts a cuisine that is distinct and flavorful, with a wide variety of dishes that cater to different tastes and preferences.
 
-Historical events such as foreign invasions, trade relations, and colonialism have played a role in introducing certain foods to this country. The Columbian discovery of the New World brought a number of new vegetables and fruit to India. A number of these such as the potato, tomatoes, chillies, peanuts, and Guava have become staples in many regions of India. Indian cuisine has shaped the history of international relations; the spice trade between India and Europe was the primary catalyst for Europe's Age of Discovery.[4] Spices were bought from India and traded around Europe and Asia. Indian cuisine has influenced other cuisines across the world, especially those from Europe (especially Britain), the Middle East, Southern African, East Africa, Southeast Asia, North America, Mauritius, Fiji, Oceania, and the Caribbean. <a href="https://www.zomato.com/">Book Here</a>
-                    </div>
+                        One of the defining features of Tamil Nadu's cuisine is its use of locally available spices, herbs, vegetables, and fruits. The state's cuisine is known for its bold and aromatic flavors, with dishes often featuring a combination of spices such as coriander, cumin, turmeric, and mustard seeds. These spices not only add depth and flavor to the dishes but also offer a range of health benefits.
+                        
+                        Tamil Nadu's cuisine is also influenced by its cultural and religious practices, particularly Hinduism. Many dishes are prepared in accordance with religious customs and traditions, with certain ingredients being considered sacred and used in specific ways. For example, vegetarianism is widely practiced in Tamil Nadu, leading to a variety of delicious vegetarian dishes that are a staple in the local diet.
+                        
+                        The state's cuisine has also been influenced by centuries of trade and invasions. Historical events such as foreign invasions and trade relations have introduced new ingredients and cooking techniques to Tamil Nadu's culinary repertoire. For example, the Columbian discovery of the New World brought new vegetables and fruits to India, including potatoes, tomatoes, and chillies, which have become staples in Tamil Nadu's cuisine.
+                        
+                        Overall, Tamil Nadu's cuisine is a testament to the state's rich history and cultural heritage, with each dish telling a story of tradition, innovation, and flavor.<a href="https://www.zomato.com/">Book Here</a>                    </div>
                 </div>
                
             </div>
@@ -935,13 +996,20 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
                     <div class="text">
                         <h1> culture <br>
                         </h1>
-                       The culture of India refers collectively to the thousands of distinct and unique cultures of all religions and communities present in India. India's languages, religions, dance, music, architecture, food and customs differ from place to place within the country. Many elements of India's diverse cultures, such as Indian religions, philosophy, cuisine, languages, dance, music and movies have a profound impact across the Indosphere, Greater India and the world. India has 29 states with different culture and the second most populated country in the world. The Indian culture, often labeled as an amalgamation of several various cultures, spans across the Indian subcontinent and has been influenced and shaped by a history that is several thousand years old. Throughout the history of India, Indian culture has been heavily influenced by Dharmic religions. They have been credited with shaping much of Indian philosophy, literature, architecture, art and music. Greater India was the historical extent of Indian culture beyond the Indian subcontinent. This particularly concerns the spread of Hinduism, Buddhism, architecture, administration and writing system from India to other parts of Asia through the Silk Road by the travellers and maritime traders during the early centuries of the Common Era. To the west, Greater India overlaps with Greater Persia in the Hindu Kush and Pamir Mountains. Over the centuries, there has been a significant fusion of cultures between Buddhists, Hindus, Muslims, Jains, Sikhs and various tribal populations in India. <a href="https://www.indiaculture.nic.in/">Know More</a>
-                    </div>
+                        Tamil Nadu's culture is a vibrant tapestry woven from thousands of distinct and unique cultures, reflecting the diversity of religions, languages, and communities present in the state. From its languages and religions to its dance, music, architecture, and food, Tamil Nadu's culture is rich and varied, with each region within the state boasting its own unique traditions and customs.
+
+                        One of the defining features of Tamil Nadu's culture is its deep-rooted connection to its ancient history and traditions. The state's languages, including Tamil, are among the oldest in the world, and have played a significant role in shaping the culture of the region. Tamil Nadu's cuisine is also steeped in tradition, with dishes that have been passed down through generations, each with its own unique flavor and preparation method.
+                        
+                        Religion plays a crucial role in Tamil Nadu's culture, with Hinduism being the dominant faith. The state is home to some of the most revered temples in India, which are not only places of worship but also centers of art, architecture, and culture.
+                        
+                        Tamil Nadu's culture has also been influenced by its interactions with other cultures and civilizations over the centuries. The state's proximity to the sea has made it a hub of trade and commerce, leading to the exchange of ideas, languages, and customs with various cultures from around the world.
+                        
+                        Overall, Tamil Nadu's culture is a reflection of its rich history, diverse communities, and deep-rooted traditions. It is a culture that is constantly evolving, yet firmly rooted in its past, making it a fascinating and vibrant tapestry of traditions, customs, and beliefs.                    </div>
                 </div>
                 <div class="col span-1-of-2">
                    <div class="containers">
                        <div class="overplays"> 
-                       <img src="culture.png" alt="" class="image">
+                       <img src="culture.jpg" alt="" class="image">
                     </div>
                        </div>
                 </div>  
@@ -953,7 +1021,7 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
                 <div class="col span-1-of-2">
                    <div class="containers">
                        <div class="overplays"> 
-                       <img src="lucknow.jpg" alt="" class="image">
+                       <img src="history.jpg" alt="" class="image">
                     </div>
                        </div>
                 </div>
@@ -961,8 +1029,11 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
                     <div class="text">
                         <h1> history <br>
                         </h1>
-                        According to consensus in modern genetics anatomically modern humans first arrived on the Indian subcontinent from Africa between 73,000 and 55,000 years ago. However, the earliest known human remains in South Asia date to 30,000 years ago. Settled life, which involves the transition from foraging to farming and pastoralism, began in South Asia around 7,000 BCE. At the site of Mehrgarh, Balochistan, Pakistan, presence can be documented of the domestication of wheat and barley, rapidly followed by that of goats, sheep, and cattle. By 4,500 BCE, settled life had spread more widely, and began to gradually evolve into the Indus Valley Civilization, an early civilization of the Old world, which was contemporaneous with Ancient Egypt and Mesopotamia. This civilisation flourished between 2,500 BCE and 1900 BCE in what today is Pakistan and north-western India, and was noted for its urban planning, baked brick houses, elaborate drainage, and water supply. <a href="https://knowindia.gov.in/culture-and-heritage/ancient-history.php">Know More</a>
-                    </div>
+                        According to modern genetic research, anatomically modern humans first arrived in the Indian subcontinent from Africa between 73,000 and 55,000 years ago. However, the earliest known human remains in South Asia date back to around 30,000 years ago. The transition from foraging to settled life, which involved the development of farming and pastoralism, began in South Asia around 7,000 BCE.
+
+                        One of the key sites for understanding this transition is Mehrgarh in Balochistan, Pakistan, where evidence of the domestication of wheat and barley, followed by goats, sheep, and cattle, has been found. By 4,500 BCE, settled life had become more widespread, leading to the gradual development of the Indus Valley Civilization.
+                        
+                        The Indus Valley Civilization, which flourished between 2,500 BCE and 1900 BCE, was one of the world's earliest urban civilizations, contemporaneous with Ancient Egypt and Mesopotamia. It was located in what is now Pakistan and north-western India, and was known for its advanced urban planning, baked brick houses, elaborate drainage systems, and sophisticated water supply mechanisms.<a href="">Know More</a>                    </div>
                 </div>
                
             </div>
@@ -975,57 +1046,63 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
                     <div class="text">
                         <h1> nature <br>
                         </h1>
-                        A fall of water is an area where water flows over a vertical drop or a series of steep drops in the course of a stream or river. Waterfalls also occur where meltwater drops over the edge of a tabular iceberg or ice shelf. Waterfalls are commonly formed in the upper course of a river where lakes fall into in steep mountains. Because of their landscape position, many waterfalls occur over bedrock fed by little contributing area, so they may be ephemeral and flow only during rainstorms or significant snowmelt. The further downstream, the more perennial a waterfall can be. Waterfalls can have a wide range of widths and depths. When the river courses over resistant bedrock, erosion happens slowly and is dominated by impacts of water-borne sediment on the rock, while downstream the erosion occurs more rapidly. As the watercourse increases its velocity at the edge of the waterfall, it may pluck material from the riverbed, if the bed is fractured or otherwise more erodible. Hydraulic jets and hydraulic jumps at the toe of a falls can generate large forces to erode the bed, especially when forces are amplified by water-borne sediment. Horseshoe-shaped falls focus the erosion to a central point, also enhancing riverbed change below a waterfalls.
-                        <a href="https://www.nature.org/en-us/about-us/where-we-work/india/stories-in-india/india-a-land-of-natural-wonders/">Know More</a>
+                        Tamil Nadu, known for its diverse and picturesque landscapes, boasts several stunning waterfalls that add to the state's natural beauty. A waterfall is an area where water cascades over a vertical drop or a series of steep drops in the course of a stream or river. These waterfalls can be found in various parts of Tamil Nadu, particularly in the Western Ghats region, where the land rises sharply, creating ideal conditions for the formation of waterfalls.
+
+                        The waterfalls in Tamil Nadu are often at their most impressive during the monsoon season when the rivers are swollen with rainwater. Some of the most famous waterfalls in Tamil Nadu include Courtallam, Hogenakkal, and Catherine Falls, each offering a unique and breathtaking sight for visitors.
+                        
+                        The formation of waterfalls in Tamil Nadu is influenced by the region's geography, with many waterfalls occurring in areas where the rivers flow over resistant bedrock. This slow erosion of the bedrock over time creates the stunning cascades that we see today. Additionally, the monsoon rains play a crucial role in replenishing the waterfalls, ensuring that they continue to flow year after year.
+                        
+                        Overall, the waterfalls of Tamil Nadu are not only a sight to behold but also a testament to the state's natural beauty and rich biodiversity. They are a popular destination for tourists and nature lovers alike, offering a refreshing escape into the heart of nature.                        <a href="https://www.nature.org/en-us/about-us/where-we-work/india/stories-in-india/india-a-land-of-natural-wonders/">Know More</a>
                     </div>
                 </div>
                 <div class="col span-1-of-2">
                    <div class="containers">
                        <div class="overplays"> 
-                       <img src="waterfalls.jpg" alt="" class="image">
+                       <img src="nature.jpg" alt="" class="image">
                     </div>
                        </div>
                 </div>
             </div>
     </section>
-   
+
+
     <section class="packages">
-        <h3> Travel Packages
+        <h3> Explore TN
         </h3>
     <div class="row">
         <div class="col span-1-of-4">
-                    <div class="contain">
-  <img src="pack-si.jpg" alt="Avatar" class="imag">
-  <div class="overl">
-    <div class="tex">The Kerala backwaters</div>
-      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
-  </div>
-</div>
-                </div>
-                <div class="col span-1-of-4">
+          <div class="contain">
+            <img src="districts/ariyalur.jpg" alt="Avatar" class="imag">
+            <div class="overl">
+              <div class="tex">Ariyalur</div>
+              <a class="button btn-pack" href="ariyalur.html" > View More  </a>
+            </div>
+          </div>
+        </div>
+        <div class="col span-1-of-4">
                   
 <div class="contain">
-  <img src="pack-ni.jpg" alt="Avatar" class="imag">
+  <img src="districts/chengalpattu1.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">The Mugal Era</div>
-      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+    <div class="tex">Chengalpattu</div>
+      <a class="button btn-pack" href="chengalpattu.html" > View More  </a>
   </div>
 </div>
                 </div>  
          <div class="col span-1-of-4">
                   <div class="contain">
-  <img src="KEDARNATH.jpg" alt="Avatar" class="imag">
+  <img src="districts/chennai1.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Lord Shiva</div>
+    <div class="tex">Chennai</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
                 </div>  
          <div class="col span-1-of-4">
                    <div class="contain">
-  <img src="rameshwaram.jpg" alt="Avatar" class="imag">
+  <img src="districts/coimbatore3.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Ramaswarem</div>
+    <div class="tex">Coimbatore</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
@@ -1037,91 +1114,423 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
     <div class="row">
         <div class="col span-1-of-4">
                    <div class="contain">
-  <img src="wildlife.jpg" alt="Avatar" class="imag">
+  <img src="districts/cuddalore1.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Wildlife Parks</div>
+    <div class="tex">Cuddalore</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
                 </div> 
         <div class="col span-1-of-4">
                    <div class="contain">
-  <img src="jamamasjid.jpg" alt="Avatar" class="imag">
+  <img src="districts/dharmapuri1.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Old Delhi</div>
+    <div class="tex">Dharmapuri</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
                 </div> 
         <div class="col span-1-of-4">
                    <div class="contain">
-  <img src="lucknow-metro.jpg" alt="Avatar" class="imag">
+  <img src="districts/dindigul3.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Travel Pass</div>
+    <div class="tex">Dindigul</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
                 </div> 
         <div class="col span-1-of-4">
                    <div class="contain">
-  <img src="la.jpg" alt="Avatar" class="imag">
+  <img src="districts/erode2.jpg" alt="Avatar" class="imag">
   <div class="overl">
-    <div class="tex">Winters</div>
+    <div class="tex">Erode</div>
       <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
   </div>
 </div>
                 </div> 
 
         </div>
-    </section>
+        </section>
+            <div id="all-packages">
+
+        <section class="packages01" id="all-packages" style="display: none;">
+          <div class="row">
+              <div class="col span-1-of-4">
+                         <div class="contain">
+        <img src="districts/kallakurichi2.jpg" alt="Avatar" class="imag">
+        <div class="overl">
+          <div class="tex">kallakurichi</div>
+            <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+        </div>
+      </div>
+                      </div> 
+              <div class="col span-1-of-4">
+                         <div class="contain">
+        <img src="districts/kancheepuram2.jpg" alt="Avatar" class="imag">
+        <div class="overl">
+          <div class="tex">kancheepuram</div>
+            <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+        </div>
+      </div>
+                      </div> 
+              <div class="col span-1-of-4">
+                         <div class="contain">
+        <img src="valluvar.jpg" alt="Avatar" class="imag">
+        <div class="overl">
+          <div class="tex">Kanyakumari</div>
+            <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+        </div>
+      </div>
+                      </div> 
+              <div class="col span-1-of-4">
+                         <div class="contain">
+        <img src="districts/karur2.jpg" alt="Avatar" class="imag">
+        <div class="overl">
+          <div class="tex">Karur</div>
+            <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+        </div>
+      </div>
+                      </div> 
+      
+              </div>
+              </section>
+
+              <section class="packages01" id="all-packages" style="display: none;">                <div class="row">
+                    <div class="col span-1-of-4">
+                               <div class="contain">
+              <img src="districts/krishnagiri1.jpg" alt="Avatar" class="imag">
+              <div class="overl">
+                <div class="tex">Krishnagiri</div>
+                  <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+              </div>
+            </div>
+                            </div> 
+                    <div class="col span-1-of-4">
+                               <div class="contain">
+              <img src="districts/Madurai3jpg.jpg" alt="Avatar" class="imag">
+              <div class="overl">
+                <div class="tex">Madurai</div>
+                  <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+              </div>
+            </div>
+                            </div> 
+                    <div class="col span-1-of-4">
+                               <div class="contain">
+              <img src="districts/mayilladuthurai3.jpg" alt="Avatar" class="imag">
+              <div class="overl">
+                <div class="tex">Mayiladuthurai</div>
+                  <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+              </div>
+            </div>
+                            </div> 
+                    <div class="col span-1-of-4">
+                               <div class="contain">
+              <img src="districts/Nagapattinam2.jpg" alt="Avatar" class="imag">
+              <div class="overl">
+                <div class="tex">Nagapattinam</div>
+                  <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+              </div>
+            </div>
+                            </div> 
+            
+                    </div>
+                    </section>
+    
+                    
+                    <section class="packages01" id="all-packages" style="display: none;">                      <div class="row">
+                          <div class="col span-1-of-4">
+                                     <div class="contain">
+                    <img src="districts/Namakkal.jpg" alt="Avatar" class="imag">
+                    <div class="overl">
+                      <div class="tex">Namakkal</div>
+                        <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                    </div>
+                  </div>
+                                  </div> 
+                          <div class="col span-1-of-4">
+                                     <div class="contain">
+                    <img src="districts/nilgiris.jpg" alt="Avatar" class="imag">
+                    <div class="overl">
+                      <div class="tex">Nilgiris</div>
+                        <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                    </div>
+                  </div>
+                                  </div> 
+                          <div class="col span-1-of-4">
+                                     <div class="contain">
+                    <img src="districts/perambalur.jpg" alt="Avatar" class="imag">
+                    <div class="overl">
+                      <div class="tex">Perambalur</div>
+                        <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                    </div>
+                  </div>
+                                  </div> 
+                          <div class="col span-1-of-4">
+                                     <div class="contain">
+                    <img src="districts/pudukottai.jpg" alt="Avatar" class="imag">
+                    <div class="overl">
+                      <div class="tex">Pudukottai</div>
+                        <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                    </div>
+                  </div>
+                                  </div> 
+                  
+                          </div>
+                          </section>
+    
+                          
+                          <section class="packages01" id="all-packages" style="display: none;">                            <div class="row">
+                                <div class="col span-1-of-4">
+                                           <div class="contain">
+                          <img src="districts/ramanathapuram.jpg" alt="Avatar" class="imag">
+                          <div class="overl">
+                            <div class="tex">Ramanathapuram</div>
+                              <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                          </div>
+                        </div>
+                                        </div> 
+                                <div class="col span-1-of-4">
+                                           <div class="contain">
+                          <img src="districts/Ranipet.jpg" alt="Avatar" class="imag">
+                          <div class="overl">
+                            <div class="tex">Ranipet</div>
+                              <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                          </div>
+                        </div>
+                                        </div> 
+                                <div class="col span-1-of-4">
+                                           <div class="contain">
+                          <img src="districts/salem.jpg" alt="Avatar" class="imag">
+                          <div class="overl">
+                            <div class="tex">Salem</div>
+                              <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                          </div>
+                        </div>
+                                        </div> 
+                                <div class="col span-1-of-4">
+                                           <div class="contain">
+                          <img src="districts/siva.jpg" alt="Avatar" class="imag">
+                          <div class="overl">
+                            <div class="tex">Sivagangai</div>
+                              <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                          </div>
+                        </div>
+                                        </div> 
+                        
+                                </div>
+                                </section>
+    
+                                
+                                <section class="packages01" id="all-packages" style="display: none;">                                  <div class="row">
+                                      <div class="col span-1-of-4">
+                                                 <div class="contain">
+                                <img src="districts/tenkasi.jpg" alt="Avatar" class="imag">
+                                <div class="overl">
+                                  <div class="tex">Tenkasi</div>
+                                    <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                </div>
+                              </div>
+                                              </div> 
+                                      <div class="col span-1-of-4">
+                                                 <div class="contain">
+                                <img src="districts/thnajavur.jpg" alt="Avatar" class="imag">
+                                <div class="overl">
+                                  <div class="tex">Thanjavur</div>
+                                    <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                </div>
+                              </div>
+                                              </div> 
+                                      <div class="col span-1-of-4">
+                                                 <div class="contain">
+                                <img src="districts/theni.jpg" alt="Avatar" class="imag">
+                                <div class="overl">
+                                  <div class="tex">Theni</div>
+                                    <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                </div>
+                              </div>
+                                              </div> 
+                                      <div class="col span-1-of-4">
+                                                 <div class="contain">
+                                <img src="districts/thoothukudi.jpg" alt="Avatar" class="imag">
+                                <div class="overl">
+                                  <div class="tex">Thoothukudi</div>
+                                    <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                </div>
+                              </div>
+                                              </div> 
+                              
+                                      </div>
+                                      </section>
+    
+                                      
+                                      <section class="packages01" id="all-packages" style="display: none;">                                        <div class="row">
+                                            <div class="col span-1-of-4">
+                                                       <div class="contain">
+                                      <img src="districts/trichy.jpg" alt="Avatar" class="imag">
+                                      <div class="overl">
+                                        <div class="tex">Thiruchirarppalli</div>
+                                          <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                      </div>
+                                    </div>
+                                                    </div> 
+                                            <div class="col span-1-of-4">
+                                                       <div class="contain">
+                                      <img src="districts/nellai.jpg" alt="Avatar" class="imag">
+                                      <div class="overl">
+                                        <div class="tex">Thirunelveli</div>
+                                          <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                      </div>
+                                    </div>
+                                                    </div> 
+                                            <div class="col span-1-of-4">
+                                                       <div class="contain">
+                                      <img src="districts/thirupathur.jpg" alt="Avatar" class="imag">
+                                      <div class="overl">
+                                        <div class="tex">Thirupathur</div>
+                                          <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                      </div>
+                                    </div>
+                                                    </div> 
+                                            <div class="col span-1-of-4">
+                                                       <div class="contain">
+                                      <img src="districts/tiruppur.jpg" alt="Avatar" class="imag">
+                                      <div class="overl">
+                                        <div class="tex">Thiruppur</div>
+                                          <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                      </div>
+                                    </div>
+                                                    </div> 
+                                    
+                                            </div>
+                                            </section>
+    
+                                            
+                                            <section class="packages01" id="all-packages" style="display: none;">                                              <div class="row">
+                                                  <div class="col span-1-of-4">
+                                                             <div class="contain">
+                                            <img src="districts/thiruvallur.jpg" alt="Avatar" class="imag">
+                                            <div class="overl">
+                                              <div class="tex">Thiruvallur</div>
+                                                <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                            </div>
+                                          </div>
+                                                          </div> 
+                                                  <div class="col span-1-of-4">
+                                                             <div class="contain">
+                                            <img src="districts/thiruvannamalai.jpg" alt="Avatar" class="imag">
+                                            <div class="overl">
+                                              <div class="tex">Thiruvannamalai</div>
+                                                <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                            </div>
+                                          </div>
+                                                          </div> 
+                                                  <div class="col span-1-of-4">
+                                                             <div class="contain">
+                                            <img src="districts/tiruvarur.jpg" alt="Avatar" class="imag">
+                                            <div class="overl">
+                                              <div class="tex">Thiruvarur</div>
+                                                <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                            </div>
+                                          </div>
+                                                          </div> 
+                                                  <div class="col span-1-of-4">
+                                                             <div class="contain">
+                                            <img src="districts/vellore.jpg" alt="Avatar" class="imag">
+                                            <div class="overl">
+                                              <div class="tex">Vellore</div>
+                                                <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                            </div>
+                                          </div>
+                                                          </div> 
+                                          
+                                                  </div>
+                                                  </section>
+    
+                                                  
+                                                  <section class="packages01" id="all-packages" style="display: none;">                                                    <div class="row">
+                                                        <div class="col span-1-of-4">
+                                                                   <div class="contain">
+                                                  <img src="districts/villu.jpg" alt="Avatar" class="imag">
+                                                  <div class="overl">
+                                                    <div class="tex">Villupuram</div>
+                                                      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                                  </div>
+                                                </div>
+                                                                </div> 
+                                                        <div class="col span-1-of-4">
+                                                                   <div class="contain">
+                                                  <img src="districts/virudhu.jpg" alt="Avatar" class="imag">
+                                                  <div class="overl">
+                                                    <div class="tex">Virudhunagar</div>
+                                                      <a class="button btn-pack" href="https://innovate.mygov.in/" > View More  </a>
+                                                  </div>
+                                                </div>
+                                                                </div> 
+                                                        
+                                                        
+                                                        </div>
+                                                        </section>
+                                                        <div class="view-more-btn" onclick="toggleContent()">View More</div>
+
+                                                        </div>
+
+
+                                                    
+          
     
     <section class="About-India">
     <div class="row">
                 <div class="col span-1-of-2">
                     <div class="text">
-                    <h1>Country info<br>
+                    <h1>State Info<br>
                     </h1>
                     </div>
                   <div class="aboutext">
                     
                       Currency : Indian Rupyee (INR)<br>
-                      Population : 1.3 Billion<br>
+                      Population : 70.2 Million<br>
                       Time Zone :UTC+5:30<br>
-                      Capital : New Delhi<br>
-                      Area : 3.287 million km2 <br>
-                      States : 28<br>
-                      Union territories : 8<br>
+                      Capital : Chennai<br>
+                      Area : 130,060 km2 <br>
+                      Districts : 38<br>
                       Country Code : +91
                     </div>
                 </div>
          <div class="col span-1-of-2">
                     <div class="text">
-                        <h1> About india <br>
+                        <h1> About TN <br>
                         </h1>
-                       Tourism in India has shown a phenomenal growth in the past decade. One of the reasons is that the Ministry of tourism, India has realized the immense potential of tourism in India during vacations. India travel tourism has grown rapidly with a great influx of tourists from all across the globe who have been irresistibly attracted to the rich culture, heritage, and incredible natural beauty of India. India tourism with its foggy hill stations, captivating beaches, historical monuments, golden deserts, serene backwaters, pilgrimage sites, rich wildlife, and colourful fairs capture the heart of every tourist. In addition, a variety of festivals, lively markets, vibrant lifestyle, and traditional Indian hospitality, will make your experience as an india tourist truly unforgettable and fantastic. Travel through the lovely Indian states and discover closely the resplendent colors and rich cultural locales of this incredible land. Our India tourism guide provides you a glimpse of travel and tourism in india ,india tourism information about south india tourism, north India tourism, and all the major tourist destinations, and tourism services of India.
+                       
+
+Tourism in Tamil Nadu has experienced remarkable growth in recent years, thanks to the state's rich cultural heritage and breathtaking natural beauty. The Tamil Nadu Tourism Department has recognized the immense potential of the state as a tourist destination, leading to a surge in visitors from around the world.
+
+Tamil Nadu offers a diverse range of attractions, from its misty hill stations and picturesque beaches to its awe-inspiring historical monuments and golden deserts. The state's serene backwaters, vibrant pilgrimage sites, and diverse wildlife further add to its charm.
+
+In addition to its natural beauty, Tamil Nadu boasts a vibrant culture, with a variety of festivals, lively markets, and a warm hospitality that is truly unforgettable. Travelers can explore the colorful and cultural diversity of Tamil Nadu by visiting its various regions, each offering a unique experience.
+
+Our Tamil Nadu tourism guide provides a glimpse into the rich tapestry of travel and tourism in the state, including information on South India tourism, North India tourism, and all major tourist destinations and services in Tamil Nadu. Come, discover the resplendent colors and rich cultural heritage of Tamil Nadu, and make your visit truly unforgettable.
                     </div>
                 </div>
             </div>
     </section>
     
-    <section class="packages">
+    <section class="Divisions">
     <div class="row">
         <div class="col span-1-of-4">
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="north-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+      <img src="western.jpg" alt="Avatar" style="width:300px;height:220px;">
     </div>
     <div class="flip-card-back">
-      <h4>NORTH INDIA</h4> 
-    <a class="zone-card" href="http://www.uptourism.gov.in/">Uttar Pradesh</a><br>
-     <a class="zone-card" href="http://delhitourism.gov.in/">Delhi</a>    <br>
-         <a class="zone-card" href="https://himachaltourism.gov.in/"> Himachal Pradesh</a><br>
-         <a class="zone-card" href="http://bstdc.bih.nic.in/">Bihar</a><br>      
-      <a class="zone-card" href="http://punjabtourism.gov.in/">Punjab</a><br>  
-        <a class="zone-card" href="https://uttarakhandtourism.gov.in/">Uttrakhand</a><br>  
-       <a class="zone-card" href="http://haryanatourism.gov.in/">Haryana</a><br>  
-        <a class="zone-card" href="http://www.jktourism.jk.gov.in/">Jammu & Kashmir</a><br>  
+      <h4>Western Ghats</h4> 
+    <a class="zone-card" href="http://www.uptourism.gov.in/">Coimbatore</a><br>
+     <a class="zone-card" href="http://delhitourism.gov.in/">Dindugal</a>    <br>
+         <a class="zone-card" href="https://himachaltourism.gov.in/"> Theni</a><br>
+         <a class="zone-card" href="http://bstdc.bih.nic.in/">Madurai</a><br>      
+      <a class="zone-card" href="http://punjabtourism.gov.in/">Virudhunagar</a><br>  
+        <a class="zone-card" href="https://uttarakhandtourism.gov.in/">Tirunelveli</a><br>  
+       <a class="zone-card" href="http://haryanatourism.gov.in/">Kanyakumari</a><br>  
     </div>
   </div>
 </div>
@@ -1130,18 +1539,17 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="south-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+      <img src="eastern.jpg" alt="Avatar" style="width:300px;height:220px;">
     </div>
     <div class="flip-card-back">
-      <h4>South India</h4> 
-     <a class="zone-card" href="https://www.telanganatourism.gov.in/">Telangana</a><br>
-     <a class="zone-card" href="https://tourism.ap.gov.in/">Andhra Pradesh</a>    <br>
-         <a class="zone-card" href="http://www.tamilnadutourism.org/"> Tamil Nadu</a><br>
-         <a class="zone-card" href="https://www.karnatakatourism.org/">Karnataka</a><br>     
-       <a class="zone-card" href="https://www.keralatourism.org/">Kerela</a><br>  
-      <a class="zone-card" href="http://goatourism.gov.in/">Goa</a><br>  
-        <a class="zone-card" href="http://www.pondytourism.in/">Puducherry</a><br>  
-       <a class="zone-card" href="https://www.andamantourism.gov.in/">Andaman & Nicobar Islands</a><br>  
+      <h4>Eastern Ghats </h4> 
+     <a class="zone-card" href="https://www.telanganatourism.gov.in/">Vellore</a><br>
+     <a class="zone-card" href="https://tourism.ap.gov.in/">Erode</a>    <br>
+         <a class="zone-card" href="http://www.tamilnadutourism.org/">Salem</a><br>
+         <a class="zone-card" href="https://www.karnatakatourism.org/">Namakkal</a><br>     
+       <a class="zone-card" href="https://www.keralatourism.org/">Dharmapuri</a><br>  
+      <a class="zone-card" href="http://goatourism.gov.in/">Thiruvannamalai</a><br>  
+        <a class="zone-card" href="http://www.pondytourism.in/">Villupuram</a><br>  
         
     </div>
   </div>
@@ -1151,17 +1559,19 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="west-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+      <img src="coastal.jpg" alt="Avatar" style="width:300px;height:220px;">
     </div>
     <div class="flip-card-back">
-      <h4>West & Central India</h4> 
-     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Rajasthan</a><br>
-     <a class="zone-card" href="https://www.gujarattourism.com/">Gujrat</a>    <br>
-         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Maharashtra</a><br>
-          <a class="zone-card" href="http://www.mptourism.com/">Madhya Pradesh</a><br>  
-         <a class="zone-card" href="http://cggovttourism.ddns.net/">Chhattisgarh</a><br>     
-       <a class="zone-card" href="http://odishatourism.gov.in/">Odisha</a><br>  
-      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Jharkhand</a><br>  
+      <h4>Coastal Line</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Chennai</a><br>
+     <a class="zone-card" href="https://www.gujarattourism.com/">Chengalpattu</a>    <br>
+         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Cuddalore</a><br>
+          <a class="zone-card" href="http://www.mptourism.com/">Mayiladuthurai</a><br>  
+         <a class="zone-card" href="http://cggovttourism.ddns.net/">Nagapattinam</a><br>     
+       <a class="zone-card" href="http://odishatourism.gov.in/">Pudukottai</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Thoothukudi</a><br>  
+      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Ramanathapuram</a><br>  
+
         
     </div>
   </div>
@@ -1171,16 +1581,11 @@ Historical events such as foreign invasions, trade relations, and colonialism ha
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="east-india.jpg" alt="Avatar" style="width:300px;height:220px;">
+      <img src="dhanush.jpg" alt="Avatar" style="width:300px;height:220px;">
     </div>
     <div class="flip-card-back">
-      <h4>East India</h4> 
-     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Rajasthan</a><br>
-     <a class="zone-card" href="https://www.gujarattourism.com/">Gujrat</a>    <br>
-         <a class="zone-card" href="https://www.maharashtratourism.gov.in/">Maharashtra</a><br>
-         <a class="zone-card" href="http://cggovttourism.ddns.net/">Chhattisgarh</a><br>     
-       <a class="zone-card" href="http://odishatourism.gov.in/">Odisha</a><br>  
-      <a class="zone-card" href="https://jharkhandtourism.gov.in/">Jharkhand</a><br>  
+      <h4>Islands</h4> 
+     <a class="zone-card" href="http://www.tourism.rajasthan.gov.in/">Ramanathapuram</a><br>
         
     </div>
   </div>
